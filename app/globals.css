@@ -2,26 +2,168 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.circles {
+  @apply mx-auto my-[50%] flex items-center justify-center;
+ }
+
+.container {
+  @apply max-w-[500px] mx-[30px] my-auto overflow-hidden min-h-[300px] border border-blue-400 p-[30px] rounded-[5px];
+ }
+
+.scroll {
+  @apply max-h-[600px] max-w-[500px] overflow-y-scroll overflow-x-hidden;
+ }
+
+.header {
+  @apply flex justify-between items-center mb-[20px];
+  }
+
+.btn {
+  @apply inline-block bg-black text-white px-3 py-2 m-[5px] rounded-[5px] cursor-pointer no-underline;
+ }
+
+.btn-focus {
+  @apply focus:outline-none;
+  }
+
+.btn-active {
+  @apply active:scale-95;
+ }
+
+.btn-block {
+  @apply block w-full;
+}
+
+.task {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* -----modal css */
+.modal {
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 25%;
+  height: 25%;
+  overflow: hidden;
+  background-color: gray;
+  border-radius: 10px;
+}
+.modal-content {
+  color: whitesmoke;
+  margin: 10% auto;
+  padding: 20px auto;
+  text-align: center;
+  width: 80%;
+}
+.header-confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #dfd9d9;
+  background-color: rgb(139, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2px;
+  box-shadow: 5px 5px 1px 5px darkred;
+  border-top-right-radius: 10px;
+  z-index: 20;
+  overflow: hidden;
+ }
+/* -----modal css ends*/
+.info {
+  @apply text-sm text-[#f11010] mt-0 text-center ml-[5px];
+  /* font-size: small;
+  color: rgb(241, 16, 16);
+  margin-top: 0;
+  text-align: center;
+  margin-left: 5px; */
+}
+.task.reminder {
+  @apply border border-l-8 border-green-900;
+  /* border-left: 5px solid green; */
+}
+
+.task h3 {
+  @apply flex items-center justify-between;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.add-from {
+  @apply mb-[40px];
+  /* margin-bottom: 40px; */
+}
+
+.form-control {
+  @apply mx-[20px] my-0;
+  /* margin: 20px 0; */
+}
+
+.form-control label {
+  @apply block;
+  /* display: block; */
+}
+
+.form-control input {
+  @apply w-full h-[40px] mx-[5px] mt-[5px] mb-0 px-[3px] py-[7px] text-lg;
+  /* width: 100%;
+  height: 40px;
+  margin: 5px 5px 0 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+} */
+}
+.datetime {
+  @apply flex justify-center items-center w-[100%] h-[40px] mx-[5px] mt-[5px] mb-0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin: 5px 5px 0 5px; */
+}
+.form-control-check {
+  @apply flex items-center justify-between;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.form-control-check label {
+  @apply flex-1;
+  /* flex: 1; */
+}
+
+.form-control-check input {
+  @apply flex-1 h-[20px];
+  /* flex: 2;
+  height: 20px; */
+}
+
+.footer {
+  @apply mt-[30px] text-center;
+  /* margin-top: 30px;
+  text-align: center; */
 }
