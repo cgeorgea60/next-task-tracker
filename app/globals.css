@@ -17,31 +17,31 @@ body {
 
 .circles {
   @apply mx-auto my-[50%] flex items-center justify-center;
- }
+}
 
 .container {
   @apply max-w-[500px] mx-[30px] my-auto overflow-hidden min-h-[300px] border border-blue-400 p-[30px] rounded-[5px];
- }
+}
 
 .scroll {
   @apply max-h-[600px] max-w-[500px] overflow-y-scroll overflow-x-hidden;
- }
+}
 
 .header {
   @apply flex justify-between items-center mb-[20px];
-  }
+}
 
 .btn {
   @apply inline-block bg-black text-white px-3 py-2 m-[5px] rounded-[5px] cursor-pointer no-underline;
- }
+}
 
 .btn-focus {
   @apply focus:outline-none;
-  }
+}
 
 .btn-active {
   @apply active:scale-95;
- }
+}
 
 .btn-block {
   @apply block w-full;
@@ -59,10 +59,10 @@ body {
   z-index: 50;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  width: 25%;
-  height: 25%;
+  /* width: 25%;
+  height: 25%; */
   overflow: hidden;
   background-color: gray;
   border-radius: 10px;
@@ -89,7 +89,7 @@ body {
   border-top-right-radius: 10px;
   z-index: 20;
   overflow: hidden;
- }
+}
 /* -----modal css ends*/
 .info {
   @apply text-sm text-[#f11010] mt-0 text-center ml-[5px];
@@ -168,9 +168,9 @@ body {
   text-align: center; */
 }
 
-@media screen and (min-width: 480px) {
+/* @media screen and (min-width: 320px) {
   .modal {
     width: 400px;
     height: 25%;
   }
-}
+} */
