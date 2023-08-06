@@ -109,7 +109,7 @@ export default function Home() {
             showAdd={showAddTask}
           />
           {showAddTask && <AddTask onAdd={addTask} />}
-          {tasks.length > 0 ? (
+          {tasks ? (
             <div className="scroll">
               <h6
                 style={{
