@@ -4,7 +4,7 @@ const Modal = ({ task, onClose, onIsOpen, onDelete }) => {
     <>
       {onIsOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-xs justify-center items-center flex"
+          className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-xs justify-center items-center flex"
         >
           <div id="myModal" className="modal w-full md:w-[25%] h-[25%] mx-2">
             {/* <div className="header-confirm">
